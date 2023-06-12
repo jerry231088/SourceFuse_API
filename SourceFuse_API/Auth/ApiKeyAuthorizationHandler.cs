@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
@@ -27,7 +26,6 @@ namespace Sourcefuse_Api.Auth
 
             if (apiKey != null)
             {
-                // Add any additional checks or validations for the API key, such as expiration date or permissions
                 context.Succeed((IAuthorizationRequirement)requirement); // When the API key is valid
             }
             else

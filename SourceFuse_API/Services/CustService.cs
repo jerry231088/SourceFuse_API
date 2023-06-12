@@ -26,19 +26,19 @@ namespace Sourcefuse_Api.Services
 
         public void CreateCustomer(Customer customer)
         {
-            // Perform any business logic validations or modifications here before calling the repository
+            // Need to perform any business logic validations or modifications here before calling the repository
             _customerRepository.CreateCustomer(customer);
         }
 
         public void UpdateCustomer(Customer customer)
         {
-            // Perform any business logic validations or modifications here before calling the repository
+            // Need to perform any business logic validations or modifications here before calling the repository
             _customerRepository.UpdateCustomer(customer);
         }
 
         public void DeleteCustomer(Customer customer)
         {
-            // Perform any business logic validations or modifications here before calling the repository
+            // Need to perform any business logic validations or modifications here before calling the repository
             _customerRepository.DeleteCustomer(customer);
         }
     }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Sourcefuse_Api.Models;
 using Sourcefuse_Api.Services;
 using Sourcefuse_Api.ViewModels;
@@ -102,9 +98,13 @@ namespace Sourcefuse_Api.Controllers
             customer.ContactInfo = new ContactInfo
             {
                 Email = customerViewModel.ContactInfo.Email,
-                Phone = customerViewModel.ContactInfo.Phone
+                Phone = customerViewModel.ContactInfo.Phone,
+                ShippingAddress = customerViewModel.ContactInfo.ShippingAddress,
+                BillingAddress = customerViewModel.ContactInfo.BillingAddress,
+                Location = customerViewModel.ContactInfo.Location,
+                City = customerViewModel.ContactInfo.City,
+                Pincode = customerViewModel.ContactInfo.Pincode
             };
-            // Handle Orders mapping
 
             return customer;
         }

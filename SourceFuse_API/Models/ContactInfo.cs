@@ -6,10 +6,10 @@ namespace Sourcefuse_Api.Models
     {
         public string Email { get; set; }
         public string Phone { get; set; }
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
+        public string ShippingAddress { get; set; }
+        public string BillingAddress { get; set; }
+        public string Location { get; set; }
         public string City { get; set; }
-        public string State { get; set; }
-        public string Pin { get; set; }
+        public int Pincode { get; set; }
     }
 }

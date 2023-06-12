@@ -7,9 +7,9 @@ namespace Sourcefuse_Api.Data
 
     public class CustRepo
     {
-        private readonly YourDataContext _context; //DB context here
+        private readonly DBContext _context; //DB context here
 
-        public CustRepo(YourDataContext context)
+        public CustRepo(DBContext context)
         {
             _context = context;
         }

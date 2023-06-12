@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -17,6 +16,30 @@ namespace Sourcefuse_Api.Auth
             ISystemClock clock)
             : base(options, logger, encoder, clock)
         {
+        }
+
+        protected override string ClaimsIssuer => base.ClaimsIssuer;
+
+        protected override object Events { get => base.Events; set => base.Events = value; }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        protected override Task<object> CreateEventsAsync()
+        {
+            return base.CreateEventsAsync();
         }
 
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
@@ -47,6 +70,31 @@ namespace Sourcefuse_Api.Auth
             }
 
             return AuthenticateResult.Fail("Invalid API key");
+        }
+
+        protected override Task HandleChallengeAsync(AuthenticationProperties properties)
+        {
+            return base.HandleChallengeAsync(properties);
+        }
+
+        protected override Task HandleForbiddenAsync(AuthenticationProperties properties)
+        {
+            return base.HandleForbiddenAsync(properties);
+        }
+
+        protected override Task InitializeEventsAsync()
+        {
+            return base.InitializeEventsAsync();
+        }
+
+        protected override Task InitializeHandlerAsync()
+        {
+            return base.InitializeHandlerAsync();
+        }
+
+        protected override string ResolveTarget(string scheme)
+        {
+            return base.ResolveTarget(scheme);
         }
     }
 
