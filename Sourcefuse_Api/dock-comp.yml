@@ -1,0 +1,27 @@
+﻿version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5000:80'
+    depends_on:
+      - database
+      # Add other dependencies if needed
+    environment:
+      - ConnectionStrings__YourDataContext=<connection_string>
+    command: >
+      sh -c "dotnet ef database update --context YourDataContext &&
+             dotnet run --urls http://0.0.0.0:80"
+
+  database:
+    image: acme-postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER="pgdb_user"
+      - POSTGRES_PASSWORD="pgdb_pwd"
+      - POSTGRES_DB="pg_db"
+    volumes:
+      - ./data:/var/lib/postgresql/data

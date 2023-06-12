@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.25
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sourcefuse_Api", "Sourcefuse_Api\Sourcefuse_Api.csproj", "{F9310F91-505E-4A39-A8E2-672A0B286809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "terraform", "terraform", "{7B5D8876-5126-4053-8A42-629832C5BA67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "environment", "environment", "{04448F09-16AC-434E-9986-0BA6179D733D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{7BB9A70E-9215-4977-94CA-347207DE803B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "acme_api", "acme_api", "{9E0B0FB9-D5BC-4F57-B241-481503D20BEB}"
+	ProjectSection(SolutionItems) = preProject
+		lambda.tf = lambda.tf
+		version.tf = version.tf
+		variables.tf = variables.tf
+		iam.tf = iam.tf
+		cloudwatch.tf = cloudwatch.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev", "dev", "{74B52675-5451-46DA-9636-BB594D244A77}"
+	ProjectSection(SolutionItems) = preProject
+		main.tf = main.tf
+		provider.tf = provider.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stage", "stage", "{F1AFB725-5541-42A5-ABBF-99D5469B29E1}"
+	ProjectSection(SolutionItems) = preProject
+		main.tf = main.tf
+		provider.tf = provider.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod", "prod", "{A0BDD608-7C4F-4251-B2EF-C8E0AE0E701C}"
+	ProjectSection(SolutionItems) = preProject
+		main.tf = main.tf
+		provider.tf = provider.tf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9310F91-505E-4A39-A8E2-672A0B286809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9310F91-505E-4A39-A8E2-672A0B286809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9310F91-505E-4A39-A8E2-672A0B286809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9310F91-505E-4A39-A8E2-672A0B286809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B360A276-517C-4CD6-AB7B-5EDE5F7603CA}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04448F09-16AC-434E-9986-0BA6179D733D} = {7B5D8876-5126-4053-8A42-629832C5BA67}
+		{7BB9A70E-9215-4977-94CA-347207DE803B} = {7B5D8876-5126-4053-8A42-629832C5BA67}
+		{9E0B0FB9-D5BC-4F57-B241-481503D20BEB} = {7BB9A70E-9215-4977-94CA-347207DE803B}
+		{74B52675-5451-46DA-9636-BB594D244A77} = {04448F09-16AC-434E-9986-0BA6179D733D}
+		{F1AFB725-5541-42A5-ABBF-99D5469B29E1} = {04448F09-16AC-434E-9986-0BA6179D733D}
+		{A0BDD608-7C4F-4251-B2EF-C8E0AE0E701C} = {04448F09-16AC-434E-9986-0BA6179D733D}
+	EndGlobalSection
+EndGlobal
